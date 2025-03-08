@@ -6,15 +6,13 @@
 //*********************************************
 
 void llpivot(Node *&head, Node *&smaller, Node *&larger, int pivot) {
-    // Base case - if head is NULL
     if (!head) { 
         smaller = nullptr;
         larger = nullptr;
         return;
     }
 
-    Node* nextNode = head->next;  // Store next node before modifying pointers
-    head->next = nullptr;  // Disconnect current node to prevent cycles
+    Node* nextNode = head->next;  // Store the next node before modifying pointers
 
     if (head->val <= pivot) { 
         smaller = head;
