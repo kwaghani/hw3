@@ -13,6 +13,7 @@ void llpivot(Node *&head, Node *&smaller, Node *&larger, int pivot) {
     }
 
     Node* nextNode = head->next;  // Store the next node before modifying pointers
+    head->next = nullptr;  // Disconnect current node
 
     if (head->val <= pivot) { 
         smaller = head;
@@ -22,5 +23,5 @@ void llpivot(Node *&head, Node *&smaller, Node *&larger, int pivot) {
         llpivot(nextNode, smaller, larger->next, pivot);
     }
 
-    head = nullptr; // Ensure head is completely detached
+    head = nullptr;  // Ensure head is fully detached
 }

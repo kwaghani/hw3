@@ -18,8 +18,11 @@ struct Event
 	
 struct EventLess {
     bool operator()(const Event* a, const Event* b) const {
-        return a->time > b->time;  // Ensure min-heap orders earlier times first
+        if (a->time == b->time)
+            return a->wire->getId() > b->wire->getId();
+        return a->time > b->time;
     }
 };
+
 
 #endif

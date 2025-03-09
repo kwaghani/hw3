@@ -20,7 +20,6 @@ gate.o: gate.cpp wire.h
 circuit.o: circuit.cpp wire.h gate.h event.h
 	$(CXX) $(CXXFLAGS) $(DEFS) -o $@ -c circuit.cpp
 
-# ❌ Removed event.o rule because event.cpp does not exist
 
 clean:
 	rm -f *.o logicsim

@@ -37,12 +37,6 @@ random_generator.h
 -
 
 /home/codio/workspace/hw3/llrec.h
-vector
--
-iostream
--
-string
--
 
 testing_utils/./random_generator.h
 random
