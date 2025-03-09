@@ -215,15 +215,15 @@ void Circuit::startUml(std::ostream& os)
 				}
 		}
     os << std::endl;
-    os << "@0" << std::endl;
-    for(auto w : m_wires)
-    {
-        if(w->getName().size() > 0)
-				{
-					os << "W" << w->getId() << " is {low,high} " << std::endl;
-				}
-		}
-    os << std::endl;
+    // os << "@0" << std::endl;
+    // for(auto w : m_wires)
+    // {
+    //     if(w->getName().size() > 0)
+		// 		{
+		// 			os << "W" << w->getId() << " is {low,high} " << std::endl;
+		// 		}
+		// }
+    // os << std::endl;
     
 }
 
